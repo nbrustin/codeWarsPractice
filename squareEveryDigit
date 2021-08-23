@@ -1,0 +1,5 @@
+function squareDigits(num){
+  const numArray = [...`${num}`].map(Number);
+  const squaredArray = numArray.map(number=>number*number)
+  return Number(squaredArray.join(""));
+}
