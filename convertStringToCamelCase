@@ -1,0 +1,10 @@
+function toCamelCase(str){
+  const spreadString = [...str];
+spreadString.forEach((elem, index)=>{
+if(elem === "-" || elem === "_") {
+spreadString[index + 1] = spreadString[index + 1].toUpperCase();   
+spreadString.splice(index, 1)
+}
+})
+  return spreadString.join("");
+}
