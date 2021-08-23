@@ -1,0 +1,22 @@
+var uniqueInOrder=function(iterable){
+  //your code here - remember iterable can be a string or an array
+  if(iterable.length > 0){
+    //start with first value
+  const iterableArray = [...iterable];
+let currentValue = iterable[0];
+const newArray = [currentValue];
+  
+for(let i = 1; i< iterable.length; i++){
+//if current item is NOT the same as previous item, push to new array
+   if(iterable[i] !== currentValue){
+    newArray.push(iterable[i]);
+currentValue = iterable[i]
+} 
+  }
+  return newArray;
+    
+  } else {
+    return [];
+  }
+
+  }
