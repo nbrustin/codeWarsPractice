@@ -1,0 +1,10 @@
+function isPangram(string){
+  //strip out all non letters
+  const letterString = string.replace(/[^a-zA-Z]/g,"").toLowerCase();
+  
+  //create hash set of letters
+  const hashString = new Set(letterString);
+  
+  //if hash string has 26 letters, string is a pangram
+  return ([...hashString].length === 26 ?  true :  false);
+  }
