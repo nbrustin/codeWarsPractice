@@ -1,0 +1,7 @@
+function findOdd(A) {
+  instancesOfEach = A.reduce((acc, curr) => (acc[curr] = (acc[curr] || 0) + 1, acc), {});
+  
+  for (let [key, value] of Object.entries(instancesOfEach)) {
+  if(value % 2 !== 0) return parseInt(key);
+}
+}
