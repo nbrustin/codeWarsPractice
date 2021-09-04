@@ -1,0 +1,9 @@
+function anagrams(word, words) {
+  //sort word alphatetically
+  const sortedWord = word.split("").sort().join("");
+  
+  return words.filter(arrayWord=>{
+    let sortedArrayWord = arrayWord.split("").sort().join("");
+    if(sortedWord === sortedArrayWord) return arrayWord;
+  })
+}
